@@ -16,14 +16,15 @@ const Main = ()=>{
             <div className="search">
               <input type="text" placeholder="Enter Book Name" />
               <button>
-                <FaSearch />
+                <FaSearch size={30} />
               </button>
             </div>
           </div>
-            <div className="container">
-<h3><Card /></h3>
-
-            </div>
+          <div className="container">
+            <h3>
+              <Card />
+            </h3>
+          </div>
         </div>
       </>
     );
