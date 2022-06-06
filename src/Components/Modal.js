@@ -1,4 +1,5 @@
 import react from "react";
+import { FaTrash } from "react-icons/fa";
 const Modal = ({ show, item, onClose }) => {
   if (!show) {
     return null;
@@ -9,8 +10,8 @@ const Modal = ({ show, item, onClose }) => {
     <>
       <div className="overlay">
         <div className="overlay-inner">
-          <button className="close" onClick={onClose}>
-            <i class="fas fa-times"></i>
+          <button>
+            <FaTrash size={30} onClick={onClose} />
           </button>
           <div className="inner-box">
             <img src={thumbnail} alt="" />
