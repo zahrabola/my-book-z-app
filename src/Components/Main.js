@@ -1,5 +1,6 @@
 import react from "react";
 import { FaSearch} from "react-icons/fa";
+import Card from "./Card";
 const Main = ()=>{
     return (
       <>
@@ -19,6 +20,10 @@ const Main = ()=>{
               </button>
             </div>
           </div>
+            <div className="container">
+<h3><Card /></h3>
+
+            </div>
         </div>
       </>
     );
