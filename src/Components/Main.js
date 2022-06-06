@@ -12,12 +12,18 @@ const [search, setSearch] =useState("");
 const searchBook=(evt)=>{
   if(evt.key==="Enter")
   {
-axios.get(
-  'https://www.googleapis.com/books/v1/volumes?q='+search+'&key=AIzaSyCs9qJLlvAU6ezHtSHQerUn3Z-kRjzlEVU'
-).then(res=>console.log(res.data.items))
-.catch(err=>console.log(err))
+axios
+  .get(
+    "https://www.googleapis.com/books/v1/volumes?q=" +
+      search +
+      "&key=AIzaSyCs9qJLlvAU6ezHtSHQerUn3Z-kRjzlEVU" +
+      "&maxResults=40"
+  )
+  .then((res) => setData(res.data.items))
+  .catch((err) => console.log(err));
   }
 }
+
 
     return (
       <>
